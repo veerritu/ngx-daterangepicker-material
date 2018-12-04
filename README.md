@@ -10,8 +10,8 @@ This plugin is a rewrite to angular from [bootstrap daterangepicker](http://www.
 
 This plugin have an independant theme which looks more close to material design, so the material design is just a style.
 
-
 ![](screen.png)
+![](screen_material.png)
 
 demo:  https://fetrarij.github.io/ngx-daterangepicker-material/
 
@@ -81,9 +81,19 @@ You can use the component directly in your templates, which will set its `inline
 
 ## Available options
 
-### autoApply, showDropdowns, singleDatePicker, showWeekNumbers, showISOWeekNumbers, alwaysShowCalendars, showClearButton, showCancel
+### autoApply, showDropdowns, singleDatePicker, showWeekNumbers, showISOWeekNumbers, alwaysShowCalendars, showClearButton, showCancel, material
 
 >These options are booleans
+
+
+### material
+> Set it true to use your primary, accent and warn colors in the widget. 
+```scss
+<!-- You will have to set following css (in main css) to make date selection color according to theme. -->
+.md-drppicker td.active, .md-drppicker td.active:hover {
+  background-color: mat-color($your-primary-color) !important;
+}
+```
 
 ### isCustomDate
 

@@ -103,6 +103,8 @@ export class DaterangepickerComponent implements OnInit {
     keepCalendarOpeningWithRange: boolean = false;
     @Input()
     showRangeLabelOnInput: boolean = false;
+    @Input()
+    material: boolean = false;
     chosenRange: string;
     rangesArray: Array<any> = [];
 
@@ -213,6 +215,7 @@ export class DaterangepickerComponent implements OnInit {
         }
 
     }
+
     renderTimePicker(side: SideEnum) {
         if (side == SideEnum.right && !this.endDate) {
             return;
@@ -329,6 +332,7 @@ export class DaterangepickerComponent implements OnInit {
         this.timepickerVariables[side].selected = selected;
     }
     renderCalendar(side: SideEnum) { // side enum
+
         let mainCalendar: any = ( side === SideEnum.left ) ? this.leftCalendar : this.rightCalendar;
         const month = mainCalendar.month.month();
         const year = mainCalendar.month.year();

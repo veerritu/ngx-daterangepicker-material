@@ -89,6 +89,8 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
   @Input()
   showRangeLabelOnInput: boolean;
   @Input()
+  material: boolean = false;
+  @Input()
   showCancel: boolean = false;
   // timepicker variables
   @Input()
